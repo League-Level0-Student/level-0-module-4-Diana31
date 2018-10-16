@@ -26,7 +26,7 @@ public class HappyPet {
 					waterPet();
 				}
 	}
-			// 6. If you determine the happiness level is large enough, tell the
+			static // 6. If you determine the happiness level is large enough, tell the
 			//    user that he loves his pet and use break; to exit for loop.
 				
 	
@@ -34,15 +34,15 @@ public class HappyPet {
 	// 4. Create methods to handle each of your user selections.
 	//    Each method should create a pop-up with the pet's response (eg. cat might purr when pet), 
 	//    and INCREMENT the pet's happiness Level.
-	void cuddlePet() {
+	  static void cuddlePet() {
 		JOptionPane.showMessageDialog(null, "ok!");
 	happinessLevel++;	
 	}
-	void feedPet() {
+	static void feedPet() {
 		JOptionPane.showMessageDialog(null, "thanks!");
 		happinessLevel++;
 	}
-	void waterPet() {
+	static void waterPet() {
 		JOptionPane.showMessageDialog(null, "I am quenched");
 		happinessLevel++;
 	}
