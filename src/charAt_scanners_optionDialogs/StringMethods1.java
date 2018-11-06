@@ -14,11 +14,18 @@ public class StringMethods1 {
 		System.out.println(Pi.charAt(3));
 		// 3. Print the length of your String to the console.
 		//    HINT: .length()
-		System.out.println(Pi.length);
+		System.out.println(Pi.length());
 		// 4. Using a for loop, print one char at time to the console.
 		//    HINT: use .length() to determine how many loops
-
-		
+		for (int i = 0; i < Pi.length(); i++) {
+			System.out.println(Pi.charAt(i));
+		}
+		Pi.charAt(9);
+		for (int i = 0; i < Pi.length(); i++) {
+			if (Pi.charAt(i)=='9'){
+			System.out.println("9 is at index 5");
+		}
+	}
 		// 5. Pick a char inside your String, and use a loop to determine
 		//    what position/index in the String the char is located.
 		//    Print the char's position to the console.
