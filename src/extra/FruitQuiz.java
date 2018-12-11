@@ -13,11 +13,11 @@ import javax.swing.JLabel;
 public class FruitQuiz extends KeyAdapter {
 
 	void makeQuestions() {
-		question1 = new JLabel(
-				"<html>Which is not a real fruit? <br> A: Dragon Fruit <br> B: Durian <br> C: Crazyberry</html>");
+		question1 = new JLabel("<html>Which is not a real fruit? <br> A: Dragon Fruit <br> B: Durian <br> C: Crazyberry</html>");
 		// 11. Make another question called "question2". Use question1 above as a guide.
-		question2 = new JLabel(
-				"<html>How do you differenciate between a male and female turtle?<br> A: The tail<br> B: The head<br> C: The neck</html>");
+		question2 = new JLabel("<html>How do you differenciate between a male and female turtle?<br> A: The tail<br> B: The head<br> C: The neck</html>");
+		question3 = new JLabel("<html>Great Whites and Hammerheads are what type of animals?<br> A: Sharks <br> B: Snakes <br> C: horses </html>");
+		question4 = new JLabel("<html>How many rings make up the symbol of the Olympic Games?<br> A: Five <br> B: three  <br> C: eight  </html>");
 	}
 		
 
@@ -32,25 +32,44 @@ public class FruitQuiz extends KeyAdapter {
 				int C = 67;
 			// 14. Repeat steps 11, 12, and 13 for question3 and question4 - IMPORTANT: The
 		// questions must be in reverse order from top to bottom to work properly
-				
-		// 12. If question2 is showing,
-				if (question2.isShowing()) {
-					if(question2.equals("A"));
-				
-		// 13. check if it is right or wrong like you did for question1
+				if (question4.isShowing()) {
+					if(keyCode==A) {
 					correct();
+		
 				}
 				else {
 					incorrect();
 				}
+				}
+				if (question3.isShowing()) {
+					if(keyCode==A) {
+					correct();
+					nextQuestion(question4);
+				}
+				else {
+					incorrect();
+				}
+				}
+		// 12. If question2 is showing,
+				if (question2.isShowing()) {
+					if(keyCode==A) {
+				
+		// 13. check if it is right or wrong like you did for question1
+					correct();
+					nextQuestion(question3);
+				}
+				else {
+					incorrect();
+				}
+				}
 		if (question1.isShowing()) {
 			// 3. If they selected the right fruit, do steps 4 and 7
-				if(question1.equals("C"));
+				if(keyCode==C);
 				
 			// 4. Call the correct() method
 					correct();
 			// 7. Use the nextQuestion() method to go to question2
-					nextQuestion();
+					nextQuestion(question2);
 		}
 			// 8. else (if they touched something else)
 					else {
@@ -58,8 +77,9 @@ public class FruitQuiz extends KeyAdapter {
 			// 9. Call the incorrect() method
 						incorrect();
 					}
-	}
-
+				}
+					
+				
 	
 
 	private void correct() {
